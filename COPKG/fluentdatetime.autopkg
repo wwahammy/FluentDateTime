@@ -1,0 +1,45 @@
+package {
+	name: "FluentDateTime";
+    display-name: "Fluent DateTime";
+    location: "http://coapp.org/repository/${OutputFilename}";
+    feed: "http://coapp.org/repository/packages.atom.xml";
+    publisher: "CoApp Project";
+}
+
+
+
+metadata {
+    licenses : {
+        "Apache2.0"
+    };
+    
+	description: "A set of (Ruby inspired) C# Extension Methods for easier and more natural DateTime handling and operations in .NET.";
+    summary: "A set of (Ruby inspired) C# Extension Methods for easier and more natural DateTime handling and operations in .NET.";
+	author-version : "1.6";
+}
+
+files[dlls] {
+    root: "..\out";
+	include: {
+        "FluentDateTime.dll"
+    };
+	
+	trim-path: minimal;
+}
+
+assemblies {
+    include : {
+      dlls
+    };
+}
+
+developer-library[dlls] {
+	reference-assemblies:
+	{
+	dlls
+	};
+    
+}
+
+
+

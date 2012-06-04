@@ -18,6 +18,14 @@ metadata {
 	author-version : "1.6";
 }
 
+compatability-policy {
+    minimum: "1.6.0.0";
+    maximum: "${OneLessThanCurrent}"; // this is the default
+    versions : {
+        "1.6",
+};
+}
+
 files[dlls] {
     root: "..\out";
 	include: {
